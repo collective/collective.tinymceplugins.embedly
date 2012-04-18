@@ -1,33 +1,36 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1'
+version = '1.0.0'
 
 long_description = (
     open('README.rst').read()
-    + '\n' +
-    'Contributors\n'
-    '============\n'
-    + '\n' +
+    + '\n\n' +
     open('CONTRIBUTORS.rst').read()
-    + '\n' +
+    + '\n\n' +
     open('CHANGES.rst').read()
-    + '\n')
+    + '\n\n' +
+    open(os.path.join('docs', 'LICENSE.rst')).read())
 
 setup(name='collective.tinymceplugins.embedly',
       version=version,
       description="Integration of the Embedly TinyMCE plugin with Plone",
       long_description=long_description,
-      # Get more strings from
-      # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
+        "Framework :: Plone",
+        "Framework :: Plone :: 4.0",
+        "Framework :: Plone :: 4.1",
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+        "Operating System :: OS Independent",
+        "Programming Language :: JavaScript",
         "Programming Language :: Python",
+        "Topic :: Text Processing :: Markup :: HTML"
         ],
       keywords='',
-      author='',
-      author_email='',
+      author='Netsight Internet Solutions Limited',
+      author_email='info@netsight.co.uk',
       url='http://github.com/collective/collective.tinymceplugins.embedly',
-      license='gpl',
+      license='GPL v2',
       packages=find_packages('src'),
       package_dir = {'': 'src'},
       namespace_packages=['collective', 'collective.tinymceplugins'],
