@@ -5,10 +5,10 @@ collective.tinymceplugins.embedly
 Introduction
 ============
 
-This package adds the embed.ly TinyMCE plugin to Plone.
+This package adds the Embedly TinyMCE plugin to Plone.
 
-Currently based on the source available in the `WordPress.org
-subversion repository
+Currently based on version 2.0.9 of the source available in the
+`WordPress.org subversion repository
 <http://plugins.svn.wordpress.org/embedly/tags/2.0.9/>`_.
 
 This product was developed by `Netsight Internet Solutions Limited
