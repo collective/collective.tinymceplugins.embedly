@@ -30,6 +30,12 @@ To use the Embedly plugin on your site, you need to provide an API key
 key by going to Site Setup -> Configuration Registry and setting the
 api_key value.
 
+Usage
+=====
+
+A video example of this product's usage in Plone can be found `on
+Vimeo <https://vimeo.com/40592731>`_.
+
 Alternatives
 ============
 
