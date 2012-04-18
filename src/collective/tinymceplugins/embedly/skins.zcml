@@ -3,7 +3,8 @@
     xmlns:cmf="http://namespaces.zope.org/cmf">
 
   <cmf:registerDirectory
-      name="tinymce_embedly"/>
+      name="tinymce_embedly"
+      recursive="true"/>
 
 </configure>
 
