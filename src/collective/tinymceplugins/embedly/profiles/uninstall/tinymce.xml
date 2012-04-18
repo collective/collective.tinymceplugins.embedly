@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<object>
+ <resourcetypes>
+  <customplugins>
+    <element value="embedly|/tinymce_embedly/editor_plugin.js" remove="True"/>
+  </customplugins>
+ </resourcetypes>
+
+ <toolbar>
+  <customtoolbarbuttons>
+   <element value="embedly" remove="True"/>
+  </customtoolbarbuttons>
+ </toolbar>
+</object>

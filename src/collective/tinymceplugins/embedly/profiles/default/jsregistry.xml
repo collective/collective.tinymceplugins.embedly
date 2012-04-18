@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object name="portal_javascripts" meta_type="JavaScripts Registry">
+ <javascript cacheable="False"
+             compression="none"
+             cookable="False"
+             enabled="True"
+             expression="not: portal/portal_membership/isAnonymousUser"
+             id="embedlyConfiguration.js"
+             inline="False"/>
+</object>

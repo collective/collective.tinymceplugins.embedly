@@ -1,0 +1,9 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:cmf="http://namespaces.zope.org/cmf">
+
+  <cmf:registerDirectory
+      name="tinymce_embedly"/>
+
+</configure>
+

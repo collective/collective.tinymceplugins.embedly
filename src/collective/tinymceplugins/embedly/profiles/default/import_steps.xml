@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<import-steps>
+  <import-step
+    id="collective.tinymceplugins.embedly-portal_transforms"
+    handler="collective.tinymceplugins.embedly.setuphandlers.setup_portal_transforms"
+    title="collective.tinymceplugins.embedly portal_transforms setup"
+    version="1.0">
+    <dependency step="plone-final"/>
+  </import-step>
+</import-steps>

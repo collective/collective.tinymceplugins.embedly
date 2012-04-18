@@ -1,0 +1,1 @@
+API_ROOT = 'http://api.embed.ly/1'
