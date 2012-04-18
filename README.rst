@@ -8,7 +8,7 @@ Introduction
 This package adds the embed.ly TinyMCE plugin to Plone.
 
 Currently based on the source available in the `WordPress.org
-subversion repository at
+subversion repository
 <http://plugins.svn.wordpress.org/embedly/tags/2.0.9/>`_.
 
 This product was developed by `Netsight Internet Solutions Limited
@@ -25,7 +25,7 @@ install using the QuickInstaller.
 Configuration
 =============
 
-To use the embed.ly on your site, you need to provide an API key
+To use the Embedly plugin on your site, you need to provide an API key
 (available from `embed.ly <http://embed.ly/>`_). You can set the API
 key by going to Site Setup -> Configuration Registry and setting the
 api_key value.
@@ -44,6 +44,6 @@ Dependencies
 
 collective.tinymceplugins.embedly currently depends on version 1.3dev
 or higher of `Products.TinyMCE
-<http://github.com/plone/Products.TinyMCE>`. This is because the
+<http://github.com/plone/Products.TinyMCE>`_. This is because the
 embed.ly TinyMCE plugin designed for WordPress is aimed at TinyMCE
 version 3.4.5 or higher.
