@@ -4,7 +4,7 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
-Nothing yet.
+ - Fix jquery script tag to match the current protocol, to avoid mixed content when served via HTTPS.
 
 1.0.1 (2012-04-18)
 ------------------
