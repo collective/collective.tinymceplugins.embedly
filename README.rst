@@ -1,7 +1,3 @@
-=================================
-collective.tinymceplugins.embedly
-=================================
-
 Introduction
 ============
 
