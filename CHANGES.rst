@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.2 (unreleased)
+1.0.2 (2016-11-05)
 ------------------
 
  - Fix jquery script tag to match the current protocol, to avoid mixed content when served via HTTPS.

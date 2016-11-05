@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0.2dev'
+version = '1.0.2'
 
 long_description = (
     open('README.rst').read()
@@ -20,6 +20,7 @@ setup(name='collective.tinymceplugins.embedly',
         "Framework :: Plone",
         "Framework :: Plone :: 4.0",
         "Framework :: Plone :: 4.1",
+        "Framework :: Plone :: 4.3",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
         "Operating System :: OS Independent",
         "Programming Language :: JavaScript",
