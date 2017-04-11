@@ -72,18 +72,6 @@ function embedly(){
             embedlyError(e);
           }
         
-          // context menu
-          if(ed && ed.plugins.contextmenu){
-            ed.plugins.contextmenu.onContextMenu.add(function(plugin, menu, element) {
-              try{
-                if (element.nodName === 'IMG' && element.className.indexOf('mceItemEmbedly') !== -1)
-                  menu.add({title: 'embedly.edit', icon : 'embedly', cmd : 'mceEmbedly'});
-              } catch(e){
-                embedlyError(e);
-              }
-            });
-          }
-        
         });
       
         ed.addCommand('mceEmbedly', function(){

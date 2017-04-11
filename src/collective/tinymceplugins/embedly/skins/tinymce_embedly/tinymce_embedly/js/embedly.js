@@ -1,5 +1,3 @@
-tinyMCEPopup.requireLangPack();
-
 $j = jQuery.noConflict(true);
 
 // callback handler for the embedly service lookup
@@ -23,8 +21,8 @@ var EmbedlyDialog = {
   {{author_name}}</a></span>{{/author}}</div><div style="clear:both;"></div><div class="embedly-clear"></div></div>',
   
   init : function(ed) {
-    tinyMCEPopup.resizeToInnerSize();
-    this.data = tinyMCEPopup.getWindowArg('data');
+    this.ed = ed;
+    this.data = ed.windowManager.getParams().data;
     this.key = this.data.key;
     this.endpoint = this.data.endpoint ? this.data.endpoint : 'oembed';
     if(typeof this.key == "undefined" || this.key == '' ){
@@ -369,7 +367,7 @@ var EmbedlyDialog = {
   },
   
   cancel: function(){
-    tinyMCEPopup.close()
+    this.ed.windowManager.close();
   },
   insert : function(file, title) {
     if(EmbedlyDialog.data.endpoint == 'preview'){
@@ -379,13 +377,13 @@ var EmbedlyDialog = {
     }
     delete EmbedlyDialog.data['key'];
     delete EmbedlyDialog.data['endpoint'];
-    var ed = tinyMCEPopup.editor, dom = ed.dom;
-    ed.execCommand('mceRepaint');
-    tinyMCEPopup.restoreSelection();
-    ed.selection.setNode(ed.plugins.embedly.dataToImg(EmbedlyDialog.data));
+    this.ed.execCommand('mceRepaint');
+    this.ed.selection.setNode(this.ed.plugins.embedly.dataToImg(EmbedlyDialog.data));
     
-    tinyMCEPopup.close();
+    this.ed.windowManager.close();
   }
 };
 
-tinyMCEPopup.onInit.add(EmbedlyDialog.init, EmbedlyDialog);
+$j(function () {
+  EmbedlyDialog.init(top.tinymce.activeEditor);
+});

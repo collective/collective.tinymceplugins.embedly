@@ -1,11 +1,10 @@
 Changelog
 =========
 
-1.0.3 (unreleased)
+2.0.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Now compatible with tinymce 4.x rather than 3.x.
 
 1.0.2 (2016-11-05)
 ------------------
