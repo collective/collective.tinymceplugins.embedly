@@ -109,10 +109,15 @@ function embedly(){
           
         // Register Buttons
         ed.addButton('embedly', 
-                       {title : 'embedly.embedly_desc', 
+                       {title : 'Insert/edit video',
                         image : EMBEDLY_TINYMCE+'/img/icon.gif',
                           cmd : 'mceEmbedly'});
-          
+        ed.addMenuItem('embedly', {
+          text: 'Insert video clip',
+          context: 'insert',
+          cmd: 'mceEmbedly'
+        });
+
         ed.onNodeChange.add(function(ed, cm, node){
           cm.setActive('embedly', isEmbedlyImg(node));
         });  
