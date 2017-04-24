@@ -109,7 +109,7 @@ function embedly(){
           
         // Register Buttons
         ed.addButton('embedly', 
-                       {title : 'Insert/edit video',
+                       {tooltip : 'Insert/edit video',
                         image : EMBEDLY_TINYMCE+'/img/icon.gif',
                           cmd : 'mceEmbedly'});
         ed.addMenuItem('embedly', {
