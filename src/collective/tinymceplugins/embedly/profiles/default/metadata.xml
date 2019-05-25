@@ -3,6 +3,5 @@
   <version>0001</version>
   <dependencies>
     <dependency>profile-collective.embedly:default</dependency>
-    <dependency>profile-Products.TinyMCE:TinyMCE</dependency>
   </dependencies>
 </metadata>
