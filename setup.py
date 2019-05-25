@@ -39,7 +39,6 @@ setup(name='collective.tinymceplugins.embedly',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'Products.TinyMCE>=1.3dev', # embedly plugin doesn't work < TinyMCE 3.4.5
           'collective.embedly'
       ],
       extras_require={'test': ['plone.app.testing']},

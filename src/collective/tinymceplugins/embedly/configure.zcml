@@ -6,7 +6,6 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="collective.tinymceplugins.embedly">
     
-  <include package="Products.TinyMCE" />
   <include package="collective.embedly" />
   <include package="collective.monkeypatcher" />
 
