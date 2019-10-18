@@ -1,11 +1,11 @@
 <registry>
   <record name="plone.custom_plugins" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="custom_plugins">
-    <value>
+    <value purge="False">
       <element>embedly|tinymce_embedly/editor_plugin.js</element>
     </value>
   </record>
   <record name="plone.custom_buttons" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="custom_buttons">
-    <value>
+    <value purge="False">
       <element>embedly</element>
     </value>
   </record>
