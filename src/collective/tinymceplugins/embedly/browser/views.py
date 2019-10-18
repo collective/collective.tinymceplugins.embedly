@@ -1,7 +1,7 @@
 import json
 from urllib import urlencode
 from urllib2 import urlopen
-from urllib2 import HTTPError
+from urllib2 import URLError
 
 from collective.embedly.interfaces import IEmbedlySettings
 from plone.memoize.view import memoize_contextless
@@ -35,9 +35,9 @@ class EmbedlyConfigurationJSSnippet(BrowserView):
             resp = urlopen(url, timeout=5)
             try:
                 resp_data = json.loads(resp.read())
-            except ValueError:
+            except (ValueError, TypeError):
                 return False
-        except HTTPError:
+        except URLError:
             return False
         
         return resp_data.get(feature_name, False)
