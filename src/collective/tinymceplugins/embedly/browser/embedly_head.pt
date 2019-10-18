@@ -1,0 +1,1 @@
+<script tal:attributes="src string:${context/portal_url}/embedlyConfiguration.js"></script>

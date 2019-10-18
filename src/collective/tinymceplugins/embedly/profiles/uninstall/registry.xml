@@ -1,0 +1,12 @@
+<registry>
+  <record name="plone.custom_plugins">
+    <value>
+      <element remove="True">embedly|tinymce_embedly/editor_plugin.js</element>
+    </value>
+  </record>
+  <record name="plone.custom_buttons">
+    <value>
+      <element remove="True">embedly</element>
+    </value>
+  </record>
+</registry>

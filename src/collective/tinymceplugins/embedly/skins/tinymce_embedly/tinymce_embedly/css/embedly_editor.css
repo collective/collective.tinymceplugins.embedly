@@ -3,7 +3,7 @@ img.mceItemEmbedly {
   border:1px dotted #0095da;
   background-repeat:no-repeat;
   background-position:center center;
-  background-image:url(../img/embed.gif);
+  background-image:url("../img/embed.gif");
 }
 img.mceItemEmbedly:after {
   clear:both;

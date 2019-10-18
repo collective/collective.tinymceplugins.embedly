@@ -37,3 +37,19 @@ def setup_portal_transforms(context):
     make_config_persistent(tconfig)
     trans._p_changed = True
     trans.reload()
+
+
+COMMON_PROFILE = 'profile-collective.tinymceplugins.embedly:common'
+
+
+def run_common_profile_steps(setup, steps=()):
+    for step_name in steps:
+        setup.runImportStepFromProfile(COMMON_PROFILE, step_name)
+
+
+def update_common_profile(context):
+    """set up indexes needed for mtneers content
+    """
+    # ensure that metadata columns are also added, if present
+    setup = getToolByName(context, 'portal_setup')
+    run_common_profile_steps(setup, ('browserlayer', 'jsregistry'))

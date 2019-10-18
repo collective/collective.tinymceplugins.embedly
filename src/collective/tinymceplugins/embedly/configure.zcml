@@ -4,18 +4,43 @@
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.tinymceplugins.embedly">
-    
+
+  <interface
+      interface=".interfaces.IAddOnInstalled"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      name="tinymce_embedly"
+      />
+
   <include package="collective.embedly" />
   <include package="collective.monkeypatcher" />
 
   <five:registerPackage package="." initialize=".initialize" />
 
   <genericsetup:registerProfile
+      zcml:condition="have plone-5"
       name="default"
       title="TinyMCE Embedly plugin"
-      directory="profiles/default"
+      directory="profiles/plone5"
       description="Installs the TinyMCE Embedly plugin"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      zcml:condition="not-have plone-5"
+      name="default"
+      title="TinyMCE Embedly plugin"
+      directory="profiles/plone4"
+      description="Installs the TinyMCE Embedly plugin"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="common"
+      title="TinyMCE Embedly plugin"
+      directory="profiles/common"
+      description="Common elements of the TinyMCE Embedly plugin"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
@@ -27,12 +52,26 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
   <!-- -*- extra stuff goes here -*- -->
-  
+
   <include file="skins.zcml" />
   <include package=".browser" />
 
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="collective.tinymceplugins.embedly" />
-  
+
+  <genericsetup:upgradeSteps
+    source="0001"
+    destination="0002"
+    profile="collective.tinymceplugins.embedly:default">
+    <genericsetup:upgradeDepends
+        title="Plone 5 support"
+        import_steps="plone.app.registry"
+        />
+    <genericsetup:upgradeStep
+        title="Viewlet install"
+        handler=".setuphandlers.update_common_profile"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>
