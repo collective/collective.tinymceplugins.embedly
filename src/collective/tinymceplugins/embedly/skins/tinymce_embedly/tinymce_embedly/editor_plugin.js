@@ -28,7 +28,7 @@ function embedly(){
         } catch(e){
           embedlyError(e);
         }
-        ed.onPreInit.add(function(){
+        ed.on('init', function(){
           // in case embeds have videos or audio tags
           // convert our embed to an Image tag for manipulation
           try {
@@ -54,10 +54,8 @@ function embedly(){
             embedlyError(e);
           }
         });
-      
-      
-      
-        ed.onInit.add(function(){
+
+        ed.on('init', function(){
           // add embedly css file to TinyMCE editor window
           try{
             ed.dom.loadCSS(EMBEDLY_TINYMCE+'/css/embedly_editor.css');
