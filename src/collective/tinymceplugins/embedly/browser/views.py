@@ -43,7 +43,10 @@ class EmbedlyConfigurationJSSnippet(BrowserView):
         return resp_data.get(feature_name, False)
     
     def __call__(self, *args, **kwargs):
-        self.request.response.content_type = 'text/javascript'
+        self.request.response.setHeader(
+            'Content-Type',
+            'text/javascript; charset=utf-8'
+        )
         portal_url = getToolByName(self.context, 'portal_url')()
         plugin_root = '%s/tinymce_embedly' % (portal_url)
         endpoint = self.has_feature('preview') and 'preview' or ''
