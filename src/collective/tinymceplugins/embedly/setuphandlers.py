@@ -26,17 +26,17 @@ def setup_portal_transforms(context):
     tid = 'safe_html'
 
     pt = getToolByName(context, 'portal_transforms')
-    if not tid in pt.objectIds(): return
+    if tid not in pt.objectIds():
+        return
 
     trans = pt[tid]
 
     tconfig = trans._config
-    
-    tconfig['valid_tags']['iframe'] = '1'
-    
-    make_config_persistent(tconfig)
-    trans._p_changed = True
-    trans.reload()
+    if tconfig is not None and 'valid_tags' in tconfig:
+        tconfig['valid_tags']['iframe'] = '1'
+        make_config_persistent(tconfig)
+        trans._p_changed = True
+        trans.reload()
 
 
 COMMON_PROFILE = 'profile-collective.tinymceplugins.embedly:common'

@@ -9,4 +9,9 @@
       <element>embedly</element>
     </value>
   </record>
+  <record prefix="plone.valid_tags" interface="Products.CMFPlone.interfaces.controlpanel.IFilterSchema" field="valid_tags">
+    <value purge="False">
+      <element>iframe</element>
+    </value>
+  </record>
 </registry>
