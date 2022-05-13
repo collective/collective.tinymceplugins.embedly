@@ -1,1 +1,1 @@
-API_ROOT = 'http://api.embed.ly/1'
+API_ROOT = 'https://api.embed.ly/1'
