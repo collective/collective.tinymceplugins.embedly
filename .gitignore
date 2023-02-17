@@ -6,3 +6,5 @@ include
 lib
 parts
 var
+*/*.egg-info/
+__pycache__/
