@@ -1,7 +1,7 @@
 import json
-from urllib import urlencode
-from urllib2 import urlopen
-from urllib2 import URLError
+from urllib.parse import urlencode
+from urllib.request import urlopen
+from urllib.error import URLError
 
 from collective.embedly.interfaces import IEmbedlySettings
 from plone.memoize.view import memoize_contextless

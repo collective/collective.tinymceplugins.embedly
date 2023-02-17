@@ -3,14 +3,14 @@ import logging
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces import INonInstallable as INonInstallableProfiles
 from Products.PortalTransforms.Transform import make_config_persistent
-from zope.interface import implements
+from zope.interface import implementer
 
 
 logger = logging.getLogger('collective.tinymceplugins.embedly.setuphandlers')
 
 
+@implementer(INonInstallableProfiles)
 class HiddenProfiles(object):
-    implements(INonInstallableProfiles)
 
     def getNonInstallableProfiles(self):
         return ['collective.tinymceplugins.embedly:uninstall'
